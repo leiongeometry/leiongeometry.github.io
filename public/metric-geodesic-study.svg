@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 830" role="img" aria-labelledby="title desc">
+  <title id="title">A hand-drawn study of straight lines, geodesics, tangent planes, and changing polyhedral metrics</title>
+  <desc id="desc">The upper half compares a straight line in the Euclidean plane with a geodesic on a curved manifold and its tangent plane. The lower half shows the same polyhedral connectivity realized with two different metrics.</desc>
+
+  <defs>
+    <filter id="paper" x="-8%" y="-8%" width="116%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="3" seed="17" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="grey"/>
+      <feComponentTransfer in="grey" result="faint">
+        <feFuncA type="table" tableValues="0 0.055"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="faint" mode="multiply"/>
+    </filter>
+    <filter id="rough" x="-4%" y="-4%" width="108%" height="108%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.011 0.023" numOctaves="2" seed="8" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <marker id="arrow-navy" markerWidth="11" markerHeight="11" refX="8" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,5.5 L0,11" fill="none" stroke="#173e64" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrow-coral" markerWidth="11" markerHeight="11" refX="8" refY="5.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,5.5 L0,11" fill="none" stroke="#e9645e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .ink { fill: none; stroke: #25272b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+      .ink-faint { fill: none; stroke: #25272b; stroke-width: 1.55; stroke-linecap: round; stroke-linejoin: round; opacity: .35; }
+      .navy { fill: none; stroke: #173e64; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+      .navy-faint { fill: none; stroke: #173e64; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; opacity: .38; }
+      .coral { fill: none; stroke: #e9645e; stroke-width: 4.7; stroke-linecap: round; stroke-linejoin: round; }
+      .paper-note { font-family: Georgia, 'Times New Roman', serif; font-style: italic; fill: #25272b; }
+      .small-note { font-family: Georgia, 'Times New Roman', serif; font-style: italic; fill: #173e64; }
+      .label { font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: 4px; fill: #173e64; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="830" fill="#f4f0e8" filter="url(#paper)"/>
+
+  <g filter="url(#rough)">
+    <!-- upper-left: Euclidean plane and its straight geodesic -->
+    <g transform="translate(54 60)">
+      <text x="4" y="3" class="label" font-size="18">EUCLIDEAN</text>
+      <path d="M18 206 L417 178 L510 285 L106 319 Z" fill="#e9e4d9" stroke="#173e64" stroke-width="2.6"/>
+      <path d="M62 277 C154 251 286 225 451 205" class="ink-faint" stroke-dasharray="8 8"/>
+      <path d="M92 287 L422 211" class="coral"/>
+      <circle cx="92" cy="287" r="6.5" fill="#e9645e"/>
+      <circle cx="422" cy="211" r="6.5" fill="#e9645e"/>
+      <text x="72" y="320" class="paper-note" font-size="28">p</text>
+      <text x="432" y="203" class="paper-note" font-size="28">q</text>
+      <path d="M133 163 C200 121 316 118 393 153" class="navy" marker-end="url(#arrow-navy)"/>
+      <text x="151" y="112" class="paper-note" font-size="29" transform="rotate(-2 151 112)">γ(t) = (1−t)p + tq</text>
+      <text x="135" y="363" class="paper-note" font-size="27" transform="rotate(1 135 363)">d<tspan baseline-shift="sub" font-size="18">E</tspan>(p,q) = ‖q−p‖</text>
+      <path d="M79 337 C128 349 162 349 199 340" class="ink-faint"/>
+      <path d="M82 342 C129 354 165 353 201 344" class="ink-faint"/>
+    </g>
+
+    <!-- upper-right: curved manifold, surface geodesic, tangent plane -->
+    <g transform="translate(610 45)">
+      <text x="7" y="18" class="label" font-size="18">ON A MANIFOLD</text>
+      <path d="M36 292 C126 168 239 154 320 245 C383 317 447 288 529 160
+               L540 286 C445 392 361 409 282 341 C198 268 123 300 30 389 Z"
+            fill="#e7e2d8" stroke="#173e64" stroke-width="2.8"/>
+      <path d="M60 308 C149 214 235 211 311 280 C382 345 450 312 519 216" class="navy-faint"/>
+      <path d="M55 344 C142 260 224 259 298 319 C372 380 449 350 526 264" class="navy-faint"/>
+      <path d="M103 255 C160 293 210 319 275 343" class="navy-faint"/>
+      <path d="M185 201 C231 244 268 274 322 303" class="navy-faint"/>
+      <path d="M286 221 C327 258 364 282 414 298" class="navy-faint"/>
+      <path d="M378 277 C423 291 465 284 504 251" class="navy-faint"/>
+
+      <path d="M60 350 C145 285 214 267 280 305 C352 346 423 334 514 213" class="coral"/>
+      <circle cx="60" cy="350" r="6.5" fill="#e9645e"/>
+      <circle cx="514" cy="213" r="6.5" fill="#e9645e"/>
+      <text x="43" y="386" class="paper-note" font-size="28">p</text>
+      <text x="522" y="208" class="paper-note" font-size="28">q</text>
+
+      <!-- tangent plane at x -->
+      <path d="M205 243 L390 185 L466 242 L278 304 Z" fill="#f4f0e8" fill-opacity=".78" stroke="#25272b" stroke-width="2.5"/>
+      <circle cx="330" cy="245" r="5.5" fill="#25272b"/>
+      <path d="M330 245 L417 218" class="ink" marker-end="url(#arrow-navy)"/>
+      <path d="M330 245 L371 277" class="ink" marker-end="url(#arrow-navy)"/>
+      <path d="M330 245 L330 159" class="navy" marker-end="url(#arrow-navy)"/>
+      <text x="424" y="216" class="paper-note" font-size="23">e₁</text>
+      <text x="377" y="292" class="paper-note" font-size="23">e₂</text>
+      <text x="338" y="267" class="paper-note" font-size="24">x</text>
+      <text x="283" y="224" class="paper-note" font-size="24">T<tspan baseline-shift="sub" font-size="16">x</tspan>M</text>
+      <text x="339" y="163" class="paper-note" font-size="24">n</text>
+
+      <text x="28" y="72" class="paper-note" font-size="28" transform="rotate(-1 28 72)">∇<tspan baseline-shift="sub" font-size="18">γ̇</tspan> γ̇ = 0</text>
+      <text x="42" y="433" class="paper-note" font-size="25" transform="rotate(1 42 433)">L<tspan baseline-shift="sub" font-size="17">g</tspan>(γ) = ∫ √g<tspan baseline-shift="sub" font-size="17">γ(t)</tspan>(γ̇,γ̇) dt</text>
+      <path d="M37 445 C166 454 324 453 475 439" class="ink-faint"/>
+    </g>
+
+    <!-- hand-drawn divider -->
+    <path d="M63 506 C293 500 445 512 600 505 C775 497 966 511 1138 503" class="ink-faint"/>
+    <path d="M66 511 C286 505 442 516 601 510 C777 503 961 515 1136 508" class="ink-faint"/>
+
+    <!-- lower study: one triangulation, two metrics -->
+    <g transform="translate(54 525)">
+      <text x="0" y="19" class="label" font-size="17">SAME CONNECTIVITY · DIFFERENT METRIC</text>
+      <text x="382" y="57" class="paper-note" font-size="25" transform="rotate(-2 382 57)">change the ruler</text>
+      <path d="M352 82 C432 52 522 54 601 86" class="navy" marker-end="url(#arrow-navy)"/>
+      <text x="426" y="105" class="paper-note" font-size="26">g₀  ↝  g₁</text>
+
+      <!-- left polyhedron g0 -->
+      <g transform="translate(48 40)">
+        <path d="M42 135 L109 46 L225 27 L302 91 L278 190 L172 226 L70 201 Z" fill="#e8e3da" stroke="#173e64" stroke-width="3"/>
+        <path d="M42 135 L151 122 L109 46 M151 122 L225 27 M151 122 L302 91 M151 122 L278 190 M151 122 L172 226 M151 122 L70 201" class="navy"/>
+        <path d="M109 46 L302 91 L225 27 M42 135 L278 190 L302 91 M70 201 L278 190 L172 226" class="navy-faint"/>
+        <path d="M109 46 L151 122" class="coral"/>
+        <text x="76" y="91" class="paper-note" font-size="23">ℓ<tspan baseline-shift="sub" font-size="15">e</tspan></text>
+        <text x="117" y="258" class="paper-note" font-size="27">(V,E,F; g₀)</text>
+      </g>
+
+      <!-- right polyhedron, same abstract edges but anisotropic metric -->
+      <g transform="translate(685 28)">
+        <path d="M48 155 L132 68 L244 33 L314 74 L284 188 L176 229 L73 211 Z" fill="#e8e3da" stroke="#173e64" stroke-width="3"/>
+        <path d="M48 155 L163 110 L132 68 M163 110 L244 33 M163 110 L314 74 M163 110 L284 188 M163 110 L176 229 M163 110 L73 211" class="navy"/>
+        <path d="M132 68 L314 74 L244 33 M48 155 L284 188 L314 74 M73 211 L284 188 L176 229" class="navy-faint"/>
+        <path d="M132 68 L163 110" class="coral"/>
+        <text x="93" y="89" class="paper-note" font-size="23">ℓ̃<tspan baseline-shift="sub" font-size="15">e</tspan></text>
+        <text x="126" y="262" class="paper-note" font-size="27">(V,E,F; g₁)</text>
+      </g>
+
+      <path d="M400 169 C455 144 516 142 584 160" class="coral" marker-end="url(#arrow-coral)"/>
+      <text x="388" y="207" class="paper-note" font-size="23">K<tspan baseline-shift="sub" font-size="15">v</tspan> = 2π − Σ θ<tspan baseline-shift="sub" font-size="15">v</tspan><tspan baseline-shift="super" font-size="15">f</tspan></text>
+    </g>
+  </g>
+</svg>
