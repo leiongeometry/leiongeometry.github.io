@@ -82,6 +82,22 @@ const thoughts = [
   },
 ];
 
+function ExternalArrow() {
+  return (
+    <svg className="link-arrow" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+      <path d="M2.75 9.25 9.25 2.75M4.25 2.75h5v5" />
+    </svg>
+  );
+}
+
+function DownArrow() {
+  return (
+    <svg className="link-arrow link-arrow--down" viewBox="0 0 12 12" aria-hidden="true" focusable="false">
+      <path d="M6 1.75v8.5M2.75 7 6 10.25 9.25 7" />
+    </svg>
+  );
+}
+
 export default function App() {
   return (
     <main>
@@ -97,9 +113,16 @@ export default function App() {
 
       <section className="hero" id="top">
         <div className="identity" id="about">
-          <h1>Lei Wang</h1>
-          <div className="coral-rule" />
-          <h2>Geometry Processing · Intrinsic Geometry · Geometric Learning</h2>
+          <div className="identity-lead">
+            <h1>Lei Wang</h1>
+            <div className="coral-rule" />
+            <h2>Geometry Processing · Intrinsic Geometry · Geometric Learning</h2>
+          </div>
+
+          <figure className="portrait-block">
+            <img src="/lei-wang.jpg" alt="Portrait of Lei Wang" />
+          </figure>
+
           <div className="hero-bio">
             <p>
               Hi, I’m Lei Wang <span className="chinese-name" lang="zh-CN">(王磊)</span>. I received my M.Eng. in Computer Technology from Shandong University, where I was supervised by <a href="https://irc.cs.sdu.edu.cn/~shiqing/index.html" target="_blank" rel="noreferrer">Prof. Shiqing Xin</a> and worked on geometry processing and robust geometric algorithms. I received my B.Eng. in Software Engineering from Harbin University of Science and Technology.
@@ -109,18 +132,14 @@ export default function App() {
             </p>
           </div>
           <div className="hero-links">
-            <a href="mailto:leiwangenesis@gmail.com">EMAIL <span>↗</span></a>
-            <a href="https://github.com/Alan-Leo-Wong" target="_blank" rel="noreferrer">GITHUB <span>↗</span></a>
-            <a href="https://scholar.google.com/citations?user=r25jWCUAAAAJ" target="_blank" rel="noreferrer">GOOGLE SCHOLAR <span>↗</span></a>
-            <a href="https://www.linkedin.com/in/lei-wang-000b14286" target="_blank" rel="noreferrer">LINKEDIN <span>↗</span></a>
-            <a href="https://x.com/SEVENTinTalent" target="_blank" rel="noreferrer">X <span>↗</span></a>
-            <a href="#publications">PUBLICATIONS <span>↓</span></a>
+            <a href="mailto:leiwangenesis@gmail.com">EMAIL <ExternalArrow /></a>
+            <a href="https://github.com/Alan-Leo-Wong" target="_blank" rel="noreferrer">GITHUB <ExternalArrow /></a>
+            <a href="https://scholar.google.com/citations?user=r25jWCUAAAAJ" target="_blank" rel="noreferrer">GOOGLE SCHOLAR <ExternalArrow /></a>
+            <a href="https://www.linkedin.com/in/lei-wang-000b14286" target="_blank" rel="noreferrer">LINKEDIN <ExternalArrow /></a>
+            <a href="https://x.com/SEVENTinTalent" target="_blank" rel="noreferrer">X <ExternalArrow /></a>
+            <a href="#publications">PUBLICATIONS <DownArrow /></a>
           </div>
         </div>
-
-        <figure className="portrait-block">
-          <img src="/lei-wang.jpg" alt="Portrait of Lei Wang" />
-        </figure>
 
         {/* Gallery is intentionally paused while its relationship to Thoughts is reconsidered.
         <div className="hero-gallery" id="metric">
@@ -169,7 +188,7 @@ export default function App() {
                 <p className="authors">{publication.authors}</p>
                 <div className="paper-links">
                   {publication.links.map(([label, href]) => (
-                    <a key={label} href={href} target="_blank" rel="noreferrer">{label} <span>↗</span></a>
+                    <a key={label} href={href} target="_blank" rel="noreferrer">{label} <ExternalArrow /></a>
                   ))}
                 </div>
               </div>
