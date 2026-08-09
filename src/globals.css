@@ -478,7 +478,6 @@ footer {
   line-height: 1.78;
 }
 .metric-copy p { margin: 0; }
-.metric-copy p + p { margin-top: 17px; }
 .metric-realization {
   display: flex;
   flex-direction: column;
@@ -519,40 +518,13 @@ footer {
   transition: transform 180ms ease, color 180ms ease;
 }
 .metric-theory[open] > summary i { color: var(--coral); transform: rotate(45deg); }
-.metric-theory-body { padding: 6px 0 30px; }
-.metric-theory-lead {
-  padding: 25px 0 30px;
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
-  gap: clamp(32px, 5vw, 72px);
-  border-top: 1px solid var(--rule);
-}
-.metric-theory-lead > p {
-  max-width: 720px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.72;
-}
-.metric-law {
-  padding-left: 22px;
-  display: grid;
-  align-content: start;
-  gap: 9px;
-  border-left: 2px solid var(--coral);
-}
-.metric-law span,
+.metric-theory-body { padding: 0 0 24px; }
 .metric-theory-grid article > span {
   color: var(--coral);
   font-size: 8px;
   font-weight: 700;
   letter-spacing: 0.15em;
 }
-.metric-law strong {
-  color: var(--ink);
-  font: 400 21px/1.18 Georgia, "Times New Roman", serif;
-}
-.metric-law small { color: var(--navy-soft); font-size: 11px; line-height: 1.5; }
 .metric-theory-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -586,10 +558,9 @@ footer {
 .metric-formula sub,
 .metric-formula sup { font-size: 0.65em; }
 .metric-theory-foot {
-  padding: 24px 0 0;
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.5fr);
-  gap: 34px;
+  padding: 18px 0 0;
+  display: flex;
+  justify-content: flex-end;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.65;
@@ -836,10 +807,8 @@ footer span:last-child { justify-self: end; }
   .metric-theory > summary span { grid-column: 1; }
   .metric-theory > summary strong { grid-column: 1; }
   .metric-theory > summary i { grid-column: 2; grid-row: 1 / 3; }
-  .metric-theory-lead { grid-template-columns: 1fr; gap: 25px; }
-  .metric-law { padding: 0 0 0 18px; }
   .metric-theory-grid { grid-template-columns: 1fr; }
-  .metric-theory-foot { grid-template-columns: 1fr; gap: 18px; }
+  .metric-theory-foot { justify-content: flex-start; }
   .thought-heading,
   .publication-heading,
   .play-heading { margin-bottom: 34px; }
