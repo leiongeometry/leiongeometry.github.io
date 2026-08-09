@@ -1,5 +1,6 @@
 import MetricThought from "./MetricThought";
 import ThemeToggle from "./ThemeToggle";
+import KleinBottlePreview from "./KleinBottlePreview";
 
 const publications = [
   {
@@ -107,6 +108,7 @@ export default function App() {
           <a href="#about">ABOUT</a>
           <a href="#thoughts">THOUGHTS</a>
           <a href="#publications">PUBLICATIONS</a>
+          <a href="#play">PLAY</a>
         </div>
         <ThemeToggle />
       </nav>
@@ -194,6 +196,31 @@ export default function App() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="play section-shell" id="play">
+        <header className="play-heading">
+          <h2>Play</h2>
+        </header>
+
+        <div className="play-track" aria-label="Interactive geometry experiments">
+          <a
+            className="play-card"
+            href="https://klein-bottle-deformation.leiw1006.chatgpt.site"
+            aria-label="Open the interactive Klein bottle deformation demo"
+          >
+            <div className="play-card-visual">
+              <KleinBottlePreview />
+              <span className="play-card-number">01</span>
+              <span className="play-card-action">OPEN →</span>
+            </div>
+            <div className="play-card-copy">
+              <p>TOPOLOGY · INTERACTIVE</p>
+              <h3>Klein Bottle</h3>
+              <span>From a rectangle to the Klein bottle.</span>
+            </div>
+          </a>
         </div>
       </section>
 
