@@ -207,7 +207,7 @@ export default function App() {
         <div className="play-track" aria-label="Interactive geometry experiments">
           <a
             className="play-card"
-            href="https://klein-bottle-deformation.leiw1006.chatgpt.site"
+            href="/play/klein-bottle/"
             aria-label="Open the interactive Klein bottle deformation demo"
           >
             <div className="play-card-visual">
