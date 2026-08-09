@@ -5,8 +5,15 @@ export default function MetricThought() {
     <div className="metric-thought">
       <div className="metric-copy">
         <p>
-          The same triangulation can carry different metrics. These four views
-          show how the metric changes the geometry we see.
+          A metric is not a pose of a mesh. It specifies lengths, angles, and
+          curvature on an abstract triangulation; a visible shape is a separate
+          choice of realization.
+        </p>
+        <p>
+          The four views separate related geometric objects: a Euclidean
+          polyhedral metric, a vertex-scaled metric in the same discrete
+          conformal class, its ideal-hyperbolic interpretation, and a
+          genus-zero spherical target.
         </p>
       </div>
 

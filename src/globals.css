@@ -478,6 +478,7 @@ footer {
   line-height: 1.78;
 }
 .metric-copy p { margin: 0; }
+.metric-copy p + p { margin-top: 17px; }
 .metric-realization {
   display: flex;
   flex-direction: column;
